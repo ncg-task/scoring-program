@@ -253,7 +253,10 @@ def main(argv):
 	# the scores for the leaderboard must be in a file named "scores.txt"
 	# https://github.com/codalab/codalab-competitions/wiki/User_Building-a-Scoring-Program-for-a-Competition#directory-structure-for-submissions	
 	
+	average_f1 = (sentences_f1 + phrases_f1 + only_iu_f1 + triples_f1)/4
+	
 	output_file=open(os.path.join(output_dir, 'scores.txt'),"w")
+	output_file.write("AVG_score:{0}\n".format(average_f1))
 	output_file.write("SENT_f1:{0}\n".format(sentences_f1)) 
 	output_file.write("SENT_precision:{0}\n".format(sentences_p))
 	output_file.write("SENT_recall:{0}\n".format(sentences_r))	
