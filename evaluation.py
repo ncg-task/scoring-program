@@ -5,9 +5,11 @@ from os import walk
 import scipy.stats
 import numpy
 
-tasks = ["machine-translation", "named-entity-recognition"]
+#in training data
+#tasks = ["natural_language_inference", "negation_scope_resolution", "paraphrase_generation", "part-of-speech_tagging", "passage_re-ranking", "phrase_grounding", "prosody_prediction", "query_wellformedness", "question_answering", "question_generation", "question_similarity", "relation_extraction", "sarcasm_detection", "semantic_parsing", "semantic_role_labeling", "sentence_classification", "sentence_compression", "sentiment_analysis", "smile_recognition", "table-based_fact_verification", "temporal_information_extraction", "text-to-speech_synthesis", "text_generation", "text_summarization", "topic_models"]
 
-#tasks = ["machine-translation", "named-entity-recognition", "question-answering", "relation-classification", "text-classification"]
+#in trial data
+tasks = ["machine-translation", "named-entity-recognition", "question-answering", "relation-classification", "text-classification"]
 
 def write_output_iu_triples(key, output_file, iu_f1, iu_p, iu_r, out_f1, out_p, out_r):
 	if key not in iu_f1.keys():
